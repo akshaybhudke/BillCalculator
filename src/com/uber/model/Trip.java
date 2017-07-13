@@ -2,13 +2,28 @@ package com.uber.model;
 
 import com.uber.common.CarType;
 
-public class Receipt {
+public class Trip {
 
 	private String customerName;
 	private CarType carType;
 	private double kmDriven;
-	private double charges;
+	private int noOfPassangers;
 	
+	
+	public Trip(){
+		
+	}
+	
+
+	public Trip(String customerName, CarType carType,int noOfPassangers, double kmDriven ) {
+		super();
+		this.customerName = customerName;
+		this.carType = carType;
+		this.kmDriven = kmDriven;
+		this.noOfPassangers = noOfPassangers;
+	}
+
+
 	public String getCustomerName() {
 		return customerName;
 	}
@@ -27,20 +42,15 @@ public class Receipt {
 	public void setKmDriven(double kmDriven) {
 		this.kmDriven = kmDriven;
 	}
-	public double getCharges() {
-		return charges;
-	}
-	public void setCharges(double charges) {
-		this.charges = charges;
-	}
 	
-	@Override
-	public String toString() {
-		return "Receipt [customerName=" + customerName + ", carType=" + carType + ", kmDriven=" + kmDriven
-				+ ", charges=" + charges + "]";
+	public int getNoOfPassangers() {
+		return noOfPassangers;
 	}
-	
-	
+
+	public void setNoOfPassangers(int noOfPassangers) {
+		this.noOfPassangers = noOfPassangers;
+	}
+
 	
 	
 }
